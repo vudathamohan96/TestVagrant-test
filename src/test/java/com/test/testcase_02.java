@@ -22,5 +22,6 @@ public class testcase_02 {
     	List<String> obj=response.path("player[0].findAll{it.country!='India'}");
     	System.out.println(obj.toString());
     	System.out.println("Total number of Foreign players: "+obj.size());
+	  Assert.assertEquals(obj.size(), 4);
     }
 }
