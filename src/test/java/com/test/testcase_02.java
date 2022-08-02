@@ -18,14 +18,13 @@ public class testcase_02 {
     	RequestSpecification req=RestAssured.given();
     	Response response=req.request(Method.GET,"/zLGH-lnj/data");
     	//response.then().body("country",Matchers.hasSize(11));
-    	// First get the JsonPath object instance from the Response interface
+    	
     	JsonPath jsonPathEvaluator = response.jsonPath();
 
-    	// Read all the books as a List of String. Each item in the list
-    	// represent a book node in the REST service Response
+    	
     	List<String> all = jsonPathEvaluator.getList("country");
 
-    	// Iterate over the list and print individual book item
+    
     	for(String country : all)
     	{
     		System.out.println("Country " + country);
