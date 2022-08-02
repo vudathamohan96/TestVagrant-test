@@ -26,6 +26,7 @@ public class testcase_01 {
 	    	List<String> obj=response.path("player[0].findAll{it.role=='Wicket-keeper'}");
 	    	System.out.println(obj.toString());
 	    	System.out.println("Total number of Wicket keepers: "+obj.size());
+		Assert.assertEquals(obj.size(), 1);
 	  }
 	  
 	  }
