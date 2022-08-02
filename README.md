@@ -1,6 +1,8 @@
 # Rest API testing using Rest-Assured Java
 -> This is repository of basic REST API testing framework 
 
+-> Converted JSON response to API.
+
 -> The public API used for this example is - https://apigenerator.dronahq.com/api/zLGH-lnj/data
 
 -> This framework is developed using Rest-Assured library for Rest API testing
