@@ -21,9 +21,11 @@ public class testcase_01 {
 			RestAssured.baseURI="https://apigenerator.dronahq.com/api/";
 	    	RequestSpecification req=RestAssured.given();
 	    	Response response=req.request(Method.GET,"/zLGH-lnj/data");
-	    	ValidatableResponse check=response.then().body("Wicket-Keeper",Matchers.hasSize(1));
-	    	System.out.println(check.extract().statusCode());
-	    	Assert.assertEquals(check.extract().statusCode(), 200);
+	    	//ValidatableResponse check=response.then().body("Wicket-Keeper",Matchers.hasSize(1));
+	    	
+	    	List<String> obj=response.path("player[0].findAll{it.role=='Wicket-keeper'}");
+	    	System.out.println(obj.toString());
+	    	System.out.println("Total number of Wicket keepers: "+obj.size());
 	  }
 	  
 	  }
