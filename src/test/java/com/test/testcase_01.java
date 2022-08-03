@@ -18,7 +18,7 @@ public class testcase_01 {
 	  @Test(enabled=true)
 		public void TestCase_01(){
 		  
-			RestAssured.baseURI="https://apigenerator.dronahq.com/api/";
+			RestAssured.baseURI="https://apigenerator.dronahq.com/api";
 	    	RequestSpecification req=RestAssured.given();
 	    	Response response=req.request(Method.GET,"/zLGH-lnj/data");
 	    	//ValidatableResponse check=response.then().body("Wicket-Keeper",Matchers.hasSize(1));
